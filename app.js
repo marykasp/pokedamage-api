@@ -1,5 +1,11 @@
-// fetch  options variable- GET method
 
+// document ready
+$(function() {
+    console.log('App loaded, waiting for submit');
+    watchForm();
+})
+
+// fetch  options variable- GET method
 const fetchOptions = {
     headers: {
         'Content-Type': 'application/json'
@@ -7,8 +13,10 @@ const fetchOptions = {
     mode: 'cors'
 }
 
-// listen for form submit (hit enter)
-$('form').on('submit', function(event) {
+// form submit listener
+function watchForm() {
+    // listen for form submit (hit enter)
+    $('form').on('submit', function(event) {
     // prevent browser default form submission
     event.preventDefault();
 
@@ -28,6 +36,9 @@ $('form').on('submit', function(event) {
     // fetch data from the types entered
    getTypeData(types);
 });
+
+}
+
 
 
 function getTypeData(pokeTypes) {
