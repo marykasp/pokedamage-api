@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
-@import url('https://fonts.googleapis.com/css?family=Lato|ZCOOL+Kuaile&display=swap');
+
 
 *, *:before, *:after {
     margin: 0;
@@ -89,6 +89,8 @@ blockquote:before {
 .text-center {
     text-align: center;
 }
+
+/* INPUT FORM */
 
 .search {
     color: #6c757d;
