@@ -104,7 +104,7 @@ blockquote:before {
 }
 
 .search input[type="text"] {
-    display: block; 
+    display: block;
     width: 400px;
     margin: 0 auto;
     height: 2.5rem;
@@ -155,6 +155,8 @@ blockquote:before {
 
 }
 
+/* CSS loader keyframe */
+
 @keyframes bounce {
     to {
         width: 16px;
@@ -166,17 +168,12 @@ blockquote:before {
 
 /* CARD DISPLAY */
 
-.pokemon-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center
-}
-
 .wrapper {
     padding-top: 40px;
     padding-bottom: 40px;
     margin: 0 auto;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
@@ -186,7 +183,7 @@ blockquote:before {
     background: #fff;
     width: 400px;
     display: block;
-    margin: 30px auto;
+    margin: 30px 20px;
     border-radius: 19px;
     position: relative;
     text-align: center;
@@ -285,7 +282,7 @@ blockquote:before {
 }
 
 .stat {
-    position: relative; 
+    position: relative;
     font-size: 24px;
     margin-bottom: 10px;
 }
@@ -361,17 +358,16 @@ a {
 }
 
 .banner {
-    width: 80%;
-    height: 70%;
-    top: 24%;
-    left: 130px;
-    position: absolute;
-    color: #fff
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  margin-top: 2rem;
 }
 
 .app-text {
     width: 50%;
-    float: left;
 }
 
 .app-text h1 {
@@ -391,9 +387,7 @@ a {
 }
 
 .app-picture {
-    width: 35%;
-    height: 40%;
-    float: right;
+    width: 25%;
 }
 
 .app-picture img {
@@ -418,3 +412,105 @@ a {
     margin-right: 20px;
 }
 
+/* Keyframes */
+@keyframes fadeIn  {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(1, 100%, 0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+/* MEDIA QUERIES- responsive */
+
+/* IPAD */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .app-text {
+      width: 35%;
+  }
+
+  .app-text h1 {
+      font-size: 53px;
+      width: 100%;
+      line-height: 1.3;
+  }
+
+  .app-text p {
+      width: 100%;
+      font-size: 17px;
+  }
+
+
+  .app-picture {
+      width: 35%;
+  }
+
+  .app-picture img {
+      margin-top: 3rem;
+      width: 100%;
+  }
+}
+
+/* SMARTPHONES */
+@media only screen 
+  and (min-device-width: 368px) 
+  and (max-device-width: 736px)  {
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .app-text {
+        width: 35%;
+    }
+
+    .app-text h1 {
+        font-size: 33px;
+        width: 30%;
+        line-height: 1.2;
+    }
+
+    .app-picture img {
+        display: none;
+    }
+
+    .search input[type="text"] {
+        width: 300px;
+    }
+
+    .card {
+        background: #fff;
+        width: 300px;
+    }
+
+
+    .card__id:before {
+        left: 97px;
+        top: 310px;
+    }
+
+}
