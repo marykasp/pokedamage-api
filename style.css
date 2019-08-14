@@ -1,0 +1,418 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+@import url('https://fonts.googleapis.com/css?family=Lato|ZCOOL+Kuaile&display=swap');
+
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eeedec;
+    background-size: cover;
+    font: 14px/20px "Lato", Arial, sans-serif;
+    color: #212529;
+}
+
+.container {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem auto;
+}
+
+.center {
+    margin-top: 3rem;
+    margin-right: auto;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Navigation */
+
+nav {
+    display: block;
+    background: #FF3938;
+    width: 100%;
+    height: 50px;
+    border: none;
+}
+nav ul {
+    margin: 15px;
+    display: inline-flex;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #333;
+}
+
+p {
+    margin: 0 3rem;
+}
+
+h1 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    font-size: 50px;
+}
+
+/* BLOCKQUOTE */
+blockquote {
+    width: 450px;
+    margin: 30px auto;
+    font-style: italic;
+    color: #333;
+    padding: 1.2em 2em 1.2em 3em;
+    border-left: 8px solid #FF3938;
+    line-height: 1.6;
+    background: #ededed;
+    position: relative;
+}
+
+blockquote:before {
+    content: "\201C";
+    color: #FF3938;
+    font-size: 4em;
+    position: absolute;
+    left: 10px;
+    top: -10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.search {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+}
+
+.search label {
+    width: 550px;
+    margin: 30px auto;
+    font-weight: 300;
+}
+
+.search input[type="text"] {
+    display: block; 
+    width: 400px;
+    margin: 0 auto;
+    height: 2.5rem;
+    margin-top: 1rem;
+    padding: 0.375rem 0.75rem;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out;
+    box-shadow: 0.15s ease-in-out;
+}
+
+.search input[type="text"]:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #FF3938;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(251, 108, 108, 0.25);
+}
+
+/* CSS ANIMATION LOADER */
+.loader {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > span {
+    display: inline-block;
+    background-color: #FF3938;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    margin: 0 8px;
+    transform: translate3d(0);
+    animation: bounce 0.6s infinite alternate;
+}
+
+.loader > span:nth-child(2) {
+    background-color: #42455a;
+    animation-delay: 0.2s;
+}
+
+.loader > span:nth-child(3) {
+    animation-delay: 0.4s;
+
+}
+
+@keyframes bounce {
+    to {
+        width: 16px;
+        height: 16px;
+        transform: translate3d(0, -16px, 0);
+    }
+}
+
+
+/* CARD DISPLAY */
+
+.pokemon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.wrapper {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: #fff;
+    width: 400px;
+    display: block;
+    margin: 30px auto;
+    border-radius: 19px;
+    position: relative;
+    text-align: center;
+    box-shadow: -1px 15px 30px -12px #333;
+    z-index: 9999;
+}
+
+.card__image {
+    position: relative;
+    height: 230px;
+    margin-bottom: 35px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+}
+
+.card__image-background {
+    background: url("images/gradient-background.png");
+}
+
+.card-image img {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+
+.card__type {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.types {
+    display: block;
+    background: #ededed;
+    width: 100px;
+    margin: 0 auto;
+    color: #FF3938;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.card__id {
+    text-transform:uppercase;
+    font-size: 20px;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-weight: 300;
+}
+
+.card__id:before {
+    content: "#";
+    color: #FF3938;
+    font-size: 1.5em;
+    position: absolute;
+    left: 157px;
+    top: 310px;
+}
+
+.card__name {
+    font-size: 26px;
+    color: #333;
+    font-weight: 900;
+    margin-bottom: 40px;
+}
+
+.pokedex {
+    text-decoration: none;
+    color: #333;
+    font-weight: 900;
+}
+
+.pokedex:hover {
+    color: #7cdb90;
+}
+
+
+.card__stats {
+    background: #FF3938;
+    color: #fff;
+    font-weight: 700;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+
+}
+
+.one-third {
+    border-right: 1px solid #fb6c6c;
+    width: 33%;
+    float: left;
+    padding: 20px 15px;
+}
+
+.one-third:last-child {
+    border-right: none
+}
+
+.stat {
+    position: relative; 
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat-value {
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+.clear-btn {
+    background: #FF3938;
+    color: #fff;
+    margin: 0 auto;
+    text-decoration: none;
+    display: block;
+    width: 100px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* HOMEPAGE TO APP */
+
+a {
+    text-decoration: none;
+}
+
+.container-main {
+    width: 100%;
+    height: 100vh;
+    background: #42455a;
+    position: relative;
+}
+
+.menu ul {
+    display: inline-flex;
+    margin: 50px;
+}
+
+.menu ul li {
+    list-style: none;
+    margin: 0 20px;
+    color: #b2b1b1;
+}
+
+.menu ul li a {
+    color: #b2b1b1;
+}
+
+.menu ul li a:hover {
+    color: #FF3938;
+}
+
+
+.logo img {
+    width: 50px;
+    margin-top: -20px;
+    margin-right: 30px;
+}
+
+.banner {
+    width: 80%;
+    height: 70%;
+    top: 24%;
+    left: 130px;
+    position: absolute;
+    color: #fff
+}
+
+.app-text {
+    width: 50%;
+    float: left;
+}
+
+.app-text h1 {
+    font-size: 43px;
+    width: 640px;
+    position: relative;
+    margin-left: 40px;
+    line-height: 55px;
+}
+
+.app-text p {
+    width: 550px;
+    font-size: 15px;
+    line-height: 25px;
+    margin: 30px 0 30px 40px;
+    color: #919191;
+}
+
+.app-picture {
+    width: 35%;
+    height: 40%;
+    float: right;
+}
+
+.app-picture img {
+    width: 100%;
+    margin-top: -20px;
+    padding-left: 10px;
+}
+
+.play-btn {
+    margin-left: 40px;
+    display: inline-flex;
+    color: #fff;
+    background: #FF3938;
+    padding: 1rem;
+    width: 100px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.play-btn .fas {
+    margin-right: 20px;
+}
+
