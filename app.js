@@ -21,11 +21,11 @@ function watchForm() {
     event.preventDefault();
 
     // get values from input and remove spaces 
-    let types = $('input[type=text').val().replace(/\s/g, '');
+    let types = $('input[type="text"]').val().replace(/\s/g, '');
     console.log(types);
 
     // clear the input field 
-    $('input[type=text').val('');
+    $('input[type="text"]').val('');
 
     // turn the types entered as a string into an array of strings
     types = types.split(',');
@@ -112,6 +112,7 @@ function getRandomPokemon(pokemonArray) {
     return pokemonArray[Math.floor(Math.random() * pokemonArray.length)];
 }
 
+// display information about pokemon on cards 
 function displayPokemon(pokemon) {
     let output = '';
 
@@ -155,17 +156,7 @@ function displayPokemon(pokemon) {
 }
 
 
-/*
-1. pass in an array of promises
-2. return a promise from this function(resolve, reject)
-3. Promise.all is a promsie that takes in the array of promises as an input. THen it gets resolved when all the promises in the array get resolved 
-4. pass the promise array from the pokeapi returned data into promise.all
-5. parse the response data into a json object
-6. need to use map method in order to iterate through the array of promises to use reponse.json()
-7. reponse.json() returns a promise, add another then handler which will then resolve the data
-- again need to use promise all since the json response is also in an array
 
-*/
 function getPromiseData(promises) {
     return new Promise((resolve,reject) => {
         // creates a promise that is resolved with an array

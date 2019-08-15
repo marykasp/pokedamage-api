@@ -126,7 +126,9 @@ blockquote:before {
     box-shadow: 0 0 0 0.2rem rgba(251, 108, 108, 0.25);
 }
 
-/* CSS ANIMATION LOADER */
+/************************
+ CSS ANIMATION LOADER 
+ ************************/
 .loader {
     margin-top: 1.5rem;
     display: flex;
@@ -166,7 +168,9 @@ blockquote:before {
 }
 
 
-/* CARD DISPLAY */
+/************************
+CARD DISPLAY
+ ************************/
 
 .wrapper {
     padding-top: 40px;
@@ -318,7 +322,9 @@ blockquote:before {
     display: none;
 }
 
-/* HOMEPAGE TO APP */
+/************************
+APP LANDING PAGE  
+ ************************/
 
 a {
     text-decoration: none;
@@ -412,29 +418,33 @@ a {
     margin-right: 20px;
 }
 
-/* Keyframes */
-@keyframes fadeIn  {
-  0% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
+/************************
+KEYFRAMES- animations 
+ ************************/
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0)
+    }
 }
 
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(1, 100%, 0);
-  }
-
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+.scene_element {
+    animation-duration: 0.25s;
+    transition-timing-function: ease-in;
+    animation-fill-mode: both;
 }
-/* MEDIA QUERIES- responsive */
+
+/* element that fades in */
+.scene_element--fadein {
+    animation-name: fadeIn;
+}
+/************************
+ MEDIA QUERIES- responsive 
+ ************************/
 
 /* IPAD */
 @media only screen 
