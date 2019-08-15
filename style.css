@@ -237,7 +237,7 @@ blockquote:before {
 .card__id:before {
     content: "#";
     color: #FF3938;
-    font-size: 1.5em;
+    font-size: 1em;
     position: absolute;
     left: 157px;
     top: 310px;
@@ -441,6 +441,15 @@ a {
 and (min-device-width : 768px) 
 and (max-device-width: 1024px) {
 
+   .container-main {
+     height: 100%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
   .banner {
     display: flex;
     flex-direction: column;
@@ -449,7 +458,7 @@ and (max-device-width: 1024px) {
   }
 
   .app-text {
-      width: 35%;
+      width: 45%;
   }
 
   .app-text h1 {
@@ -479,21 +488,27 @@ and (max-device-width: 1024px) {
   and (min-device-width: 368px) 
   and (max-device-width: 736px)  {
 
-    .menu ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
+    .container-main {
+        height: 100vh;
+    }
+
+    .container {
+        width: 100%;
+        margin: 0 auto;
     }
 
     .app-text {
-        width: 35%;
+        width: 95%;
     }
 
     .app-text h1 {
         font-size: 33px;
-        width: 30%;
+        width: 90%;
         line-height: 1.2;
+    }
+
+    .app-text p {
+        width: 100%
     }
 
     .app-picture img {
